@@ -1,0 +1,35 @@
+My Example v.dat is this:
+
+1.0.0
+Blueberry.jpg,1.0.0
+Readme.txt,1.0.3
+Data/Somthing.dll,1.2.4
+
+It basicly first, lists the program version
+Then it lists the individual file info.
+
+(This is uploaded to the webspace you put in modUpdate)
+Server Side v.dat:
+1.0.1
+Blueberry.jpg,1.0.1
+Readme.txt,1.0.3
+Data/Somthing.dll,1.2.3
+Data/More.dll,1.0.0
+
+How it updates:
+First it sees that 1.0.0 < 1.0.1 so update starts
+
+First it checks Blueberry.jpg (1.0.0 < 1.0.1) So it updates it.
+Then checks the Readme file, (1.0.3 = 1.0.3) So doesn't update it.
+Checks Data/Somthing.dll (1.2.4 > 1.2.3) No update here.
+Finnaly checks Data/More.dll (File doesnt exist) So downloads it then updates it.
+
+What you need to put on your website:
+v.dat
+News.txt
+(The files to be updated, Compressed using the Compression/Decompression Wizard.)
+
+Blueberry.jpg
+Readme.txt
+Data/Somthing.dll
+Data/More.dll
